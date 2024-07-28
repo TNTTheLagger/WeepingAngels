@@ -2,6 +2,9 @@ package net.hazel.weepingangels;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.hazel.weepingangels.block.ModBlocks;
+import net.hazel.weepingangels.item.ModItemGroups;
+import net.hazel.weepingangels.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +14,9 @@ public class WeepingAngels implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Initializing " + MOD_ID);
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
