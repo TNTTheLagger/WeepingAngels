@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "weeping-angels",
+	"version": "${version}",
+	"name": "Weeping Angels",
+	"description": "This is a mod that adds Weeping Angels from the tv show Doctor Who",
+	"authors": [
+		"Hazel"
+	],
+	"contact": {
+		"homepage": "https://hueserver.hu/",
+		"sources": "https://github.com/TNTTheLagger"
+	},
+	"license": "MIT",
+	"icon": "assets/weeping-angels/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hazel.weepingangels.WeepingAngels"
+		],
+		"client": [
+			"net.hazel.weepingangels.WeepingAngelsClient"
+		],
+		"fabric-datagen": [
+			"net.hazel.weepingangels.WeepingAngelsDataGenerator"
+		]
+	},
+	"mixins": [
+		"weeping-angels.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
